@@ -1,0 +1,24 @@
+{
+  "name": "micro-blog-part2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/costajohnt/micro-blog-part2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/costajohnt/micro-blog-part2/issues"
+  },
+  "homepage": "https://github.com/costajohnt/micro-blog-part2#readme",
+  "description": ""
+}

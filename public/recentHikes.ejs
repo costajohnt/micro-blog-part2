@@ -1,0 +1,10 @@
+<% for (var i = 0; i < hikes.length; i++) { %>
+	<div class="list-group-item">
+		<button class="btn btn-primary pull-right delete" >x</button>
+		<i><%= hikes[i].count %></i>
+		<br>
+		<b><%= hikes[i].postContent %></b>
+		<br>
+		<i><%= hikes[i].day %> <%= hikes[i].displayDate %></i>
+	</div>
+<% } %>

@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Hiker Notes</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Hiker Notes</title>
 
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
-    <!-- VENDOR SCRIPTS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- VENDOR SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- APPLICATION SCRIPTS -->
-    <script src="base2.js"></script>
-  </head>
-  <body>
-    <div id="background">
-      <div class="container" id="topdiv">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
-            <h1>HIKER NOTES</h1>
-                <form class="input-group col-md-8 col-md-offset-2" id="new-tiny-post">
-                  <input type="text" id="blogText" class="form-control" placeholder="Tell us about your journey">
-                    <span class="input-group-btn">
-                      <button type="submit" id="searchButton" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="click here to publish your thoughts">Post</button>
-                    </span>
-                </form>
-              </div>
-            </div>
-          </div>
-         </div> 
-      <!-- <div class="container">
-        <div class="row"> -->
-        <div>
-          <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
-          <h2>RECENT HIKES</h2>
-            <div class="row" id="published-post-list"></div>  
-              </div> 
-       <!--    </div>
-        </div> -->
+  <!-- APPLICATION SCRIPTS -->
+  <script src="base2.js"></script>
+  <script type="text/javascript" src="ejs_production.js"></script>
+</head>
+<body>
+  <div id="background">
+    <div class="container" id="topdiv">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+          <h1>HIKER NOTES</h1>
+          <form class="input-group col-md-8 col-md-offset-2" id="new-tiny-post">
+            <input type="text" id="blogText" class="form-control" placeholder="Tell us about your journey">
+            <span class="input-group-btn">
+              <button type="submit" id="searchButton" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="click here to publish your thoughts">Post</button>
+            </span>
+          </form>
+        </div>
       </div>
-  </body>
+    </div>
+  </div> 
+  <div>
+    <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+      <h2>RECENT HIKES</h2>
+      <div class="row" id="published-post-list"></div>  
+    </div> 
+  </div>
+</body>
 </html>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <title>Hiker Notes</title>
 
   <!-- STYLESHEETS -->
@@ -27,7 +27,7 @@
         <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
           <h1>HIKER NOTES</h1>
           <form class="input-group col-md-8 col-md-offset-2" id="new-tiny-post">
-            <input type="text" id="blogText" class="form-control" placeholder="Tell us about your journey">
+            <input type="text" id="blogText" name='content' class="form-control" placeholder="Tell us about your journey">
             <span class="input-group-btn">
               <button type="submit" id="searchButton" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="click here to publish your thoughts">Post</button>
             </span>
@@ -39,9 +39,15 @@
   <div>
     <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
       <h2>RECENT HIKES</h2>
-      <div class="row" id="published-post-list"></div>  
-    </div> 
-  </div>
+      <div class="row" id="published-post-list">
+
+      </div>  
+  </div> 
+</ul>
+</div>
+  <script type="text/javascript">
+    window.hikes = <%- JSON.stringify(hikesFound) %>
+  </script>
 </body>
 </html>
 

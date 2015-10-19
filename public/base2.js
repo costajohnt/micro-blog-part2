@@ -4,14 +4,15 @@ $(document).ready(function(){
 		$('[data-toggle="tooltip"]').tooltip();
 	});
 
-	var count = 1;
-	var hikes = [];
-
-	function Post(content) {	
-		var publishedPosts = '<div id="#published-post-item" >' + this.contents + '</div>';	
-		this.count = count;
-		this.content = content;
+	function refreshHikes() {
+		var html = new EJS({url: 'recentHikes.ejs'}).render(window.hikes);
+		$('#published-post-list').empty();
+		$('#published-post-list').prepend(html);
 	}
+
+	refreshHikes();
+
+	var count = 1;
 
 	$('#new-tiny-post').submit(function(e) {
 		e.preventDefault();
@@ -22,20 +23,21 @@ $(document).ready(function(){
 		var day = dayNames[date.getDay()];
 		var displayDate = (date.getMonth()+1) + '/' + (date.getDate()) + '/' + date.getFullYear();
 
-		new Post(postContent);
-		if (postContent) {
-			var hike = {
-				count: count,
-				postContent: postContent,
-				day: day,
-				displayDate: displayDate	
-			};
+		var hikeData = {
+			postContent: postContent,
+    		count : count,
+    		day : day,
+    		displayDate : displayDate
+		};
 
-			hikes.push(hike);
-			console.log(hikes);
-			count++;
-		}
+		$.post('/api/hikes', hikeData, function (response){
+		 	window.hikes.push(response);
+		 	refreshHikes();
+		});
+
+		count++;
 		$('#blogText').val('');
+
 	});
 
 	$('#published-post-list').on("click", ".delete", function handleClick(event){
